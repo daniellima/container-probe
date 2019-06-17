@@ -16,4 +16,8 @@ spec:
     spec:
       containers:
       - name: container-probe
-        image: gcr.io/almost-giving-up-of-gke/container-probe:v0.0.2
+        image: gcr.io/almost-giving-up-of-gke/container-probe:v0.0.5
+        readinessProbe:
+          httpGet:
+            path: /ping
+            port: 3000
